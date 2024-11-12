@@ -26,7 +26,7 @@ export function ItemList({ items }) {
             <button className={`px-4 py-2 rounded-xl h-full  ${sortBy === 'name' ? "bg-blue-700" : "bg-gray-700 && hover:bg-green-900"} text-white`}onClick={() => setSortBy('name')}>Sort by Name </button>
             <button className={`px-4 py-2 rounded-xl h-full  ${sortBy === 'category' ? "bg-blue-700" : "bg-gray-700 && hover:bg-green-900"} text-white`} onClick={() => setSortBy('category')}>Sort by Category</button>
             </div>
-            {items.map((item, id) => (
+            {sortedItems.map((item, id) => (
                 <Item
                     key={id}
                     name={item.name}
